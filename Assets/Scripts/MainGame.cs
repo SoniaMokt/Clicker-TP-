@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class MainGame : Etienne.Singleton<MainGame> {
 
     [SerializeField] private InputActionReference mouseClick;
-    [SerializeField] private Monster monster;
+    [SerializeField] private Hive hive;
     [SerializeField] private GameObject prefabHitPoint;
     [SerializeField] private GameObject prefabUpgradeUI;
     [SerializeField] private List<MonsterData> monsters = new List<MonsterData>();
@@ -22,19 +22,19 @@ public class MainGame : Etienne.Singleton<MainGame> {
         base.Awake();
         mainCamera = Camera.main;
         mouseClick.action.performed += MouseClick;
-        parentUpgrade = prefabUpgradeUI.transform.parent;
+        //parentUpgrade = prefabUpgradeUI.transform.parent;
     }
 
     private void Start() {
         currentMonsterIndex = 0;
-        monster.SetMonster(monsters[currentMonsterIndex]);
+        //hive.SetMonster(monsters[currentMonsterIndex]);
 
-        prefabUpgradeUI.SetActive(false);
-        foreach(Upgrade upgrade in upgrades) {
-            GameObject go = GameObject.Instantiate(prefabUpgradeUI, parentUpgrade, false);
-            go.SetActive(true);
-            go.GetComponent<UpgradeUI>().Initialize(upgrade);
-        }
+        //prefabUpgradeUI.SetActive(false);
+        //foreach(Upgrade upgrade in upgrades) {
+        //    GameObject go = GameObject.Instantiate(prefabUpgradeUI, parentUpgrade, false);
+        //    go.SetActive(true);
+        //    go.GetComponent<UpgradeUI>().Initialize(upgrade);
+        //}
 
     }
 
@@ -51,31 +51,31 @@ public class MainGame : Etienne.Singleton<MainGame> {
 
             lock(unlockedUpgrades) {
                 foreach(Upgrade upgrade in unlockedUpgrades) {
-                    HitMonster(monster.transform.position, upgrade.DPS);
+                    HitMonster(hive.transform.position, upgrade.DPS);
                 }
             }
         }
     }
 
     public void NextMonster() {
-        monster.SetMonster(monsters[++currentMonsterIndex]);
+        //hive.SetMonster(monsters[++currentMonsterIndex]);
     }
 
     private void MouseClick(InputAction.CallbackContext obj) {
         Vector3 world = mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         RaycastHit2D hit = Physics2D.Raycast(world, Vector2.zero);
-        if(hit.collider is null || !hit.collider.TryGetComponent(out Monster _)) return;
+        if(hit.collider is null || !hit.collider.TryGetComponent(out Hive _)) return;
         HitMonster(hit.point, 1);
     }
 
     private void HitMonster(Vector2 position, int damage) {
-        monster.Hit(damage);
-        SpawnHitPointDamage(position, monster, damage);
-        if(!monster.IsAlive) NextMonster();
+       // hive.Hit(damage);
+        SpawnHitPointDamage(position, hive, damage);
+        //if(!hive.IsAlive) NextMonster();
     }
 
-    private void SpawnHitPointDamage(Vector2 position, Monster monster, int amount) {
-        GameObject go = GameObject.Instantiate(prefabHitPoint, position + Random.insideUnitCircle, Quaternion.identity, monster.Canvas.transform);
+    private void SpawnHitPointDamage(Vector2 position, Hive hive, int amount) {
+        GameObject go = GameObject.Instantiate(prefabHitPoint, position + Random.insideUnitCircle, Quaternion.identity, hive.Canvas.transform);
         go.transform.DOLocalMoveY(go.transform.localPosition.y + .5f, .8f);
         TMPro.TextMeshProUGUI text = go.GetComponent<TMPro.TextMeshProUGUI>();
         text.text = amount.ToString();
