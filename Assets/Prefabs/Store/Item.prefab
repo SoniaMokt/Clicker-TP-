@@ -320,8 +320,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 140.24, y: -9.524292}
-  m_SizeDelta: {x: 140.24, y: 9.048583}
+  m_AnchoredPosition: {x: 140.24, y: -9.702882}
+  m_SizeDelta: {x: 140.24, y: 9.405764}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &369843244316709056
 CanvasRenderer:
@@ -786,7 +786,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 100}
+  m_SizeDelta: {x: 482.81, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2128617432652075665
 CanvasRenderer:
@@ -1367,7 +1367,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 3
-  m_Spacing: 0
+  m_Spacing: 2
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -1387,7 +1387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ca6ba337bb4c2409873bd7214b7e35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UpgradePrefab: {fileID: 6677854916433169329, guid: 165821114f6902349803c017adb95301, type: 3}
+  _Prefab: {fileID: 6677854916433169329, guid: 165821114f6902349803c017adb95301, type: 3}
 --- !u!1 &8002483057020905164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,8 +1424,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 140.24, y: -27.024292}
-  m_SizeDelta: {x: 36.84, y: 9.951417}
+  m_AnchoredPosition: {x: 140.24, y: -27.57788}
+  m_SizeDelta: {x: 36.84, y: 10.344236}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &2109457334217473894
 CanvasRenderer:

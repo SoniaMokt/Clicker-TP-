@@ -1,8 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Hive : MonoBehaviour
+namespace BeeClicker
 {
-    public Canvas Canvas => GetComponentInChildren<Canvas>();
+    public class Hive : MonoBehaviour, IClickable
+    {
+        public System.Action OnClick;
+        public void Click()
+        {
+            GameManager.Instance.StatsHandeler.Click();
+            OnClick?.Invoke();
+        }
+    }
 }

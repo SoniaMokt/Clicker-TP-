@@ -2,29 +2,28 @@ using UnityEngine;
 
 namespace BeeClicker.Store
 {
-    public class UpgradeHandeler : MonoBehaviour
+    public class UpgradeHandeler : MonoBehaviour, IHandelable<int>
     {
         [Header("Prefabs")]
-        [SerializeField] private GameObject _UpgradePrefab;
+        [SerializeField] private GameObject _Prefab;
 
-
-        public void Handle(int[] upgrades)
+        public void Handle(int[] h)
         {
             Upgrade[] childUpgrades = GetComponentsInChildren<Upgrade>();
-            Debug.Log(childUpgrades.Length);
-            if(childUpgrades.Length == upgrades.Length) return;
-            if(childUpgrades.Length > upgrades.Length)
+            if(childUpgrades.Length == h.Length) return;
+            if(childUpgrades.Length > h.Length)
             {
-                for(int i = childUpgrades.Length - 1; i >= upgrades.Length; i--)
+                for(int i = childUpgrades.Length - 1; i >= h.Length; i--)
                 {
                     GameObject.DestroyImmediate(childUpgrades[i].gameObject);
                 }
             }
-            if(childUpgrades.Length < upgrades.Length)
+            if(childUpgrades.Length < h.Length)
             {
-                for(int i = childUpgrades.Length; i < upgrades.Length; i++)
+                for(int i = childUpgrades.Length; i < h.Length; i++)
                 {
-                    GameObject.Instantiate(_UpgradePrefab, transform);
+                    GameObject go = GameObject.Instantiate(_Prefab, transform);
+                    go.GetComponentInChildren<ISetupable>()?.Setup();
                 }
             }
         }

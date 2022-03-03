@@ -29,14 +29,39 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 300
       value: 3000000
+      inSlope: 14244.689
+      outSlope: 14244.689
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.048276063
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _Gain:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
+    - serializedVersion: 3
+      time: 300
+      value: 51576.625
+      inSlope: 227.09073
+      outSlope: 227.09073
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.11172435
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _DamageType: 0
   _Icon: {fileID: -6978437120488251390, guid: 2947d6d6e289ca64fb7b411972c0b8a4, type: 3}
   _Upgrades: 000000000000000000000000
