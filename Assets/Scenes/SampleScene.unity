@@ -3446,7 +3446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Currency: 0
   _DPS: 0
-  _ClickDamage: 1
+  _ClickDamage: 0
 --- !u!4 &2008356368
 Transform:
   m_ObjectHideFlags: 0
