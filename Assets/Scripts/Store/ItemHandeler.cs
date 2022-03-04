@@ -23,7 +23,7 @@ namespace BeeClicker.Store
                 for(int i = childItems.Length; i < h.Length; i++)
                 {
                     GameObject go = GameObject.Instantiate(_Prefab, transform);
-                    go.GetComponentInChildren<ISetupable>()?.Setup();
+                    go.GetComponentInChildren<Item>()?.Setup(h[i]);
                 }
             }
         }

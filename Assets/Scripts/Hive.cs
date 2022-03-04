@@ -1,13 +1,29 @@
+using DG.Tweening;
+using System.Collections;
 using UnityEngine;
 
 namespace BeeClicker
 {
-    public class Hive : MonoBehaviour, IClickable
+    public class Hive : Level
     {
-        public System.Action OnClick;
-        public void Click()
+
+        private void Awake()
         {
-            GameManager.Instance.StatsHandeler.Click();
+            OnCompleted += Disable;
+            GameManager.Instance.Monster.OnCompleted += Enable;
+        }
+        protected override void Start()
+        {
+            base.Start();
+            Enable(false);
+        }
+
+
+        public override void Click()
+        {
+            LooseValue(GameManager.Instance.StatsHandeler.Click());
+            transform.DOComplete();
+            transform.DOPunchScale(Vector3.one * .1f, .4f);
             OnClick?.Invoke();
         }
     }

@@ -5,9 +5,8 @@ using UnityEngine.UI;
 
 namespace BeeClicker.Store
 {
-    public class Item : MonoBehaviour, ISetupable
+    public class Item : MonoBehaviour, ISetupable<ItemScriptableObject>
     {
-        [SerializeField] private ItemScriptableObject _Item;
         [SerializeField] private int _Level = 0;
         [Header("Texts")]
         [SerializeField] private TMPro.TextMeshProUGUI _NameText;
@@ -20,19 +19,21 @@ namespace BeeClicker.Store
         private Button _LevelUpButton;
         private int _Price;
         private UpgradeHandeler _UpgradeHandeler;
+        ItemScriptableObject _Item;
 
-        public void Setup()
+        public void Setup(ItemScriptableObject item)
         {
-            _NameText.text = _Item.Name;
-            _DescriptionText.text = _Item.Description;
+            _Item = item;
+            _NameText.text = item.Name;
+            _DescriptionText.text = item.Description;
             UpdateValues();
-            _Icon.sprite = _Item.Icon;
+            _Icon.sprite = item.Icon;
 
             _LevelUpButton = GetComponentInChildren<Button>();
             _LevelUpButton.onClick.AddListener(LevelUp);
 
             _UpgradeHandeler = GetComponentInChildren<UpgradeHandeler>();
-            _UpgradeHandeler.Handle(_Item.Upgrades);
+            _UpgradeHandeler.Handle(item.Upgrades);
         }
 
         private void UpdateValues()
@@ -44,7 +45,7 @@ namespace BeeClicker.Store
 
         private void LevelUp()
         {
-            if(!GameManager.Instance.Buy(_Price)) return;
+            if(!GameManager.Instance.TryToBuy(_Price)) return;
             GameManager.Instance.IncreaseDamage(_Item, Mathf.RoundToInt(_Item.Gain.Evaluate(_Level)));
             _Level++;
             UpdateValues();

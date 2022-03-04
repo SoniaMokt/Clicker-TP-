@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace BeeClicker.Store
@@ -20,8 +21,21 @@ namespace BeeClicker.Store
             statsHandeler.OnDPSChange += UpdateDPS;
             statsHandeler.OnClickDamageChange += UpdateClickDamage;
 
+            GameManager.Instance.Hive.OnCompleted += Disable;
+            GameManager.Instance.Monster.OnCompleted += Enable;
+
             _ItemContainer = GetComponentInChildren<ItemHandeler>();
             _ItemContainer.Handle(_Items);
+        }
+
+        private void Disable(bool obj)
+        {
+            gameObject.SetActive(false);    
+        }
+
+        private void Enable(bool obj)
+        {
+            gameObject.SetActive(true);    
         }
 
         private void UpdateCurrency(int amount)

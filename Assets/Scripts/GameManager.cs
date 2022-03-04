@@ -8,10 +8,12 @@ namespace BeeClicker
     public class GameManager : Etienne.Singleton<GameManager>
     {
         public Hive Hive => _Hive;
+        public Monster.Monster Monster => _Monster;
         public StatsHandeler StatsHandeler => _StatsHandeler;
 
         [SerializeField] private InputActionReference _MouseClick;
         [SerializeField] private Hive _Hive;
+        [SerializeField] private Monster.Monster _Monster;
         [SerializeField] private StatsHandeler _StatsHandeler;
 
         private Camera _MainCamera;
@@ -41,9 +43,14 @@ namespace BeeClicker
             _MouseClick.action.Disable();
         }
 
-        public bool Buy(int price)
+        public void GainCurrency(int amount)
         {
-            return StatsHandeler.Pay(price);
+            StatsHandeler.GainCurrency(amount);
+        }
+
+        public bool TryToBuy(int price)
+        {
+            return StatsHandeler.TryToPay(price);
         }
 
         public void IncreaseDamage(ItemScriptableObject item, int amount)

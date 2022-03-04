@@ -1,13 +1,15 @@
 using BeeClicker.Store;
+using System;
 using UnityEngine;
 
 namespace BeeClicker
 {
-    public class StatsHandeler : MonoBehaviour, IClickable
+    public class StatsHandeler : MonoBehaviour
     {
         public System.Action<int> OnCurrencyChange;
         public System.Action<int> OnDPSChange;
         public System.Action<int> OnClickDamageChange;
+        public System.Action OnDPSFirstChange;
 
         [SerializeField] private int _Currency;
         [SerializeField] private int _DPS;
@@ -20,13 +22,25 @@ namespace BeeClicker
             OnClickDamageChange?.Invoke(_ClickDamage);
         }
 
-        public void Click()
+        public int DPS()
         {
-            _Currency += _ClickDamage;
+            ChangeCurrency(_DPS);
+            return _DPS;
+        }
+
+        public int Click(bool gainCurrency = true)
+        {
+            if(gainCurrency) ChangeCurrency(_ClickDamage);
+            return _ClickDamage;
+        }
+
+        private void ChangeCurrency(int value)
+        {
+            _Currency += value;
             OnCurrencyChange?.Invoke(_Currency);
         }
 
-        public bool Pay(int price)
+        public bool TryToPay(int price)
         {
             if(price > _Currency) return false;
             _Currency -= price;
@@ -43,10 +57,16 @@ namespace BeeClicker
                     OnClickDamageChange?.Invoke(_ClickDamage);
                     break;
                 case DamageType.DPS:
+                    if(_DPS == 0) OnDPSFirstChange?.Invoke();
                     _DPS += amount;
                     OnDPSChange?.Invoke(_DPS);
                     break;
             }
+        }
+
+        internal void GainCurrency(int amount)
+        {
+            ChangeCurrency(amount);
         }
     }
 }

@@ -4,18 +4,11 @@ using UnityEngine;
 
 namespace BeeClicker
 {
-    public class Upgrade : MonoBehaviour
+    public class Upgrade : MonoBehaviour, ISetupable<int>
     {
-        // Start is called before the first frame update
-        void Start()
+        public void Setup(int s)
         {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
+            
         }
     }
 }

@@ -8,8 +8,8 @@ namespace BeeClicker
     {
         public void Handle(T[] h);
     }
-    public interface ISetupable
+    public interface ISetupable<T>
     {
-        public void Setup();
+        public void Setup(T s);
     }
 }
