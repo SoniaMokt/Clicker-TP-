@@ -1,6 +1,5 @@
 using DG.Tweening;
 using System.Collections;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace BeeClicker.Monster
@@ -25,7 +24,7 @@ namespace BeeClicker.Monster
         protected override void Enable(bool completed = true)
         {
             base.Enable(completed);
-            StartCoroutine( Timer());
+            StartCoroutine(Timer());
         }
 
         protected override void Disable(bool completed = true)
@@ -37,7 +36,7 @@ namespace BeeClicker.Monster
         public IEnumerator Timer()
         {
             OnTimerStart?.Invoke(_Timer);
-            yield return new    WaitForSeconds(_Timer);
+            yield return new WaitForSeconds(_Timer);
             Complete(false);
         }
 
@@ -50,8 +49,8 @@ namespace BeeClicker.Monster
         public override void Click()
         {
             LooseValue(GameManager.Instance.StatsHandeler.Click(false));
-            transform.DOComplete();
-            transform.DOPunchScale(Vector3.one * .1f, .4f);
+            _Visual.DOComplete();
+            _Visual.DOPunchScale(Vector3.one * .1f, .4f);
             OnClick?.Invoke();
         }
     }

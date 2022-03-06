@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace BeeClicker.Store
@@ -8,6 +7,7 @@ namespace BeeClicker.Store
         [Header("Texts")]
         [SerializeField] private TMPro.TextMeshProUGUI _CurrencyText;
         [SerializeField] private TMPro.TextMeshProUGUI _DPSText;
+        [SerializeField] private TMPro.TextMeshProUGUI _HPSText;
         [SerializeField] private TMPro.TextMeshProUGUI _ClickDamageText;
         [Header("Items")]
         [SerializeField] private ItemScriptableObject[] _Items;
@@ -19,6 +19,7 @@ namespace BeeClicker.Store
             StatsHandeler statsHandeler = GameManager.Instance.StatsHandeler;
             statsHandeler.OnCurrencyChange += UpdateCurrency;
             statsHandeler.OnDPSChange += UpdateDPS;
+            statsHandeler.OnHPSChange += UpdateHPS;
             statsHandeler.OnClickDamageChange += UpdateClickDamage;
 
             GameManager.Instance.Hive.OnCompleted += Disable;
@@ -30,27 +31,32 @@ namespace BeeClicker.Store
 
         private void Disable(bool obj)
         {
-            gameObject.SetActive(false);    
+            gameObject.SetActive(false);
         }
 
         private void Enable(bool obj)
         {
-            gameObject.SetActive(true);    
+            gameObject.SetActive(true);
         }
 
         private void UpdateCurrency(int amount)
         {
-            _CurrencyText.text = amount.ToString();
+            _CurrencyText.text = amount.KiloFormat();
+        }
+
+        private void UpdateHPS(int amount)
+        {
+            _HPSText.text = amount.KiloFormat();
         }
 
         private void UpdateDPS(int amount)
         {
-            _DPSText.text = amount.ToString();
+            _DPSText.text = amount.KiloFormat();
         }
 
         private void UpdateClickDamage(int amount)
         {
-            _ClickDamageText.text = amount.ToString();
+            _ClickDamageText.text = amount.KiloFormat();
         }
     }
 }

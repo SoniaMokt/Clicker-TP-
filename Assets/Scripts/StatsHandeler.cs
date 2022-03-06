@@ -1,5 +1,4 @@
 using BeeClicker.Store;
-using System;
 using UnityEngine;
 
 namespace BeeClicker
@@ -8,17 +7,19 @@ namespace BeeClicker
     {
         public System.Action<int> OnCurrencyChange;
         public System.Action<int> OnDPSChange;
+        public System.Action<int> OnHPSChange;
         public System.Action<int> OnClickDamageChange;
-        public System.Action OnDPSFirstChange;
 
         [SerializeField] private int _Currency;
         [SerializeField] private int _DPS;
+        [SerializeField] private int _HPS;
         [SerializeField] private int _ClickDamage;
 
         private void Start()
         {
             OnCurrencyChange?.Invoke(_Currency);
             OnDPSChange?.Invoke(_DPS);
+            OnHPSChange?.Invoke(_HPS);
             OnClickDamageChange?.Invoke(_ClickDamage);
         }
 
@@ -26,6 +27,11 @@ namespace BeeClicker
         {
             ChangeCurrency(_DPS);
             return _DPS;
+        }
+        public int HPS()
+        {
+            ChangeCurrency(_HPS);
+            return _HPS;
         }
 
         public int Click(bool gainCurrency = true)
@@ -50,17 +56,21 @@ namespace BeeClicker
 
         public void IncreaseDamage(ItemScriptableObject item, int amount)
         {
-            switch(item.DamageType)
+            DamageType damageType = item.DamageType;
+            if(damageType.HasFlag(DamageType.ClickDamage))
             {
-                case DamageType.ClickDamage:
-                    _ClickDamage += amount;
-                    OnClickDamageChange?.Invoke(_ClickDamage);
-                    break;
-                case DamageType.DPS:
-                    if(_DPS == 0) OnDPSFirstChange?.Invoke();
-                    _DPS += amount;
-                    OnDPSChange?.Invoke(_DPS);
-                    break;
+                _ClickDamage += amount;
+                OnClickDamageChange?.Invoke(_ClickDamage);
+            }
+            if(damageType.HasFlag(DamageType.DPS))
+            {
+                _DPS += amount;
+                OnDPSChange?.Invoke(_DPS);
+            }
+            if(damageType.HasFlag(DamageType.HPS))
+            {
+                _HPS += amount;
+                OnHPSChange?.Invoke(_HPS);
             }
         }
 

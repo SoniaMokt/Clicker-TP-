@@ -3,7 +3,8 @@ using UnityEngine;
 
 namespace BeeClicker.Store
 {
-    public enum DamageType { ClickDamage, DPS }
+    [System.Flags]
+    public enum DamageType { None, ClickDamage, DPS, HPS = 4 }
     [CreateAssetMenu(fileName = "StoreItem", menuName = "Beeclicker/Store/Item")]
     public class ItemScriptableObject : ScriptableObject
     {

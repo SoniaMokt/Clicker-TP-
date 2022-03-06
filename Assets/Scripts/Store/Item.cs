@@ -7,6 +7,8 @@ namespace BeeClicker.Store
 {
     public class Item : MonoBehaviour, ISetupable<ItemScriptableObject>
     {
+
+
         [SerializeField] private int _Level = 0;
         [Header("Texts")]
         [SerializeField] private TMPro.TextMeshProUGUI _NameText;
@@ -19,7 +21,7 @@ namespace BeeClicker.Store
         private Button _LevelUpButton;
         private int _Price;
         private UpgradeHandeler _UpgradeHandeler;
-        ItemScriptableObject _Item;
+        private ItemScriptableObject _Item;
 
         public void Setup(ItemScriptableObject item)
         {
@@ -38,16 +40,32 @@ namespace BeeClicker.Store
 
         private void UpdateValues()
         {
-            _LevelText.text = _Level.ToString();
+            _LevelText.text = _Level.KiloFormat();
             _Price = Mathf.RoundToInt(_Item.Prices.Evaluate(_Level));
-            _PriceText.text = _Price.ToString();
+            _PriceText.text = _Price.KiloFormat();
         }
 
         private void LevelUp()
         {
-            if(!GameManager.Instance.TryToBuy(_Price)) return;
-            GameManager.Instance.IncreaseDamage(_Item, Mathf.RoundToInt(_Item.Gain.Evaluate(_Level)));
+            GameManager instance = GameManager.Instance;
+            if(!instance.TryToBuy(_Price)) return;
+            instance.IncreaseDamage(_Item, Mathf.RoundToInt(_Item.Gain.Evaluate(_Level)));
             _Level++;
+            DamageType damageType = _Item.DamageType;
+            if(!damageType.HasFlag(DamageType.ClickDamage))
+            {
+                if(damageType == DamageType.HPS)
+                {
+                    instance.BuyBee(nameof(Monster.Butineuse), _Level);
+
+                } else if(damageType == DamageType.DPS)
+                {
+                    instance.BuyBee(nameof(Monster.Dart), _Level);
+                } else
+                {
+                    instance.BuyBee(nameof(Monster.Shield), _Level);
+                }
+            }
             UpdateValues();
         }
     }

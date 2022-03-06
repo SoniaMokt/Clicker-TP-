@@ -62,6 +62,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _DamageType: 1
+  _DamageType: 6
   _Icon: {fileID: 4540073814707146859, guid: 2947d6d6e289ca64fb7b411972c0b8a4, type: 3}
   _Upgrades: 

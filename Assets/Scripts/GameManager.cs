@@ -7,6 +7,8 @@ namespace BeeClicker
     [DefaultExecutionOrder(-1)]
     public class GameManager : Etienne.Singleton<GameManager>
     {
+        public System.Action<string, int> OnBeePurchased;
+
         public Hive Hive => _Hive;
         public Monster.Monster Monster => _Monster;
         public StatsHandeler StatsHandeler => _StatsHandeler;
@@ -56,6 +58,11 @@ namespace BeeClicker
         public void IncreaseDamage(ItemScriptableObject item, int amount)
         {
             StatsHandeler.IncreaseDamage(item, amount);
+        }
+
+        public void BuyBee(string bee, int amount)
+        {
+            OnBeePurchased?.Invoke(bee, amount);
         }
     }
 }
