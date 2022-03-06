@@ -14,9 +14,10 @@ namespace BeeClicker
             GameManager.Instance.Hive.OnEnable += ChangeBackground;
             GameManager.Instance.Hive.OnCompleted += HideTree;
             _Renderer = GetComponent<Image>();
+            ChangeBackground(true);
         }
 
-        private void HideTree(bool completed)
+        private void HideTree(int _, bool __)
         {
             _Tree.gameObject.SetActive(false);
         }

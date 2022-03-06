@@ -14,7 +14,7 @@ namespace BeeClicker
         protected override void Start()
         {
             base.Start();
-            Enable(false);
+            Enable(0, false);
         }
 
 

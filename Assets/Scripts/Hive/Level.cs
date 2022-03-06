@@ -7,12 +7,12 @@ namespace BeeClicker
     public abstract class Level : MonoBehaviour, IClickable
     {
         public System.Action OnClick;
-        public System.Action<bool> OnCompleted;
+        public System.Action<int, bool> OnCompleted;
         public System.Action<int> OnValueChanged;
         public System.Action<int> OnLevelChanged;
         public System.Action<bool> OnEnable;
 
-        [SerializeField] private int _Level;
+        [SerializeField] protected int _Level;
         [SerializeField] private AnimationCurve _ValueCurve;
         [SerializeField] private DamageType _DamageType;
         [SerializeField] protected Transform _Visual;
@@ -45,36 +45,36 @@ namespace BeeClicker
         {
             if(_CurrentValue - amount <= 0)
             {
-                Complete();
+                Complete(_Level);
                 return;
             }
             _CurrentValue -= amount;
             UpdateValue();
         }
 
-        protected virtual void Complete(bool completed = true)
+        protected virtual void Complete(int level, bool completed = true)
         {
-            OnCompleted?.Invoke(completed);
+            OnCompleted?.Invoke(level, completed);
         }
 
-        protected virtual void LevelUp()
+        protected virtual void LevelUp(int level)
         {
-            _Level++;
+            _Level = level;
             _CurrentMaxValue = Mathf.RoundToInt(_ValueCurve.Evaluate(_Level));
             _CurrentValue = _CurrentMaxValue;
             ChangeLevel();
         }
 
-        protected virtual void Disable(bool completed = true)
+        protected virtual void Disable(int level, bool completed = true)
         {
             gameObject.SetActive(false);
         }
 
-        protected virtual void Enable(bool completed = true)
+        protected virtual void Enable(int level, bool completed = true)
         {
             gameObject.SetActive(true);
             StartDPS();
-            if(completed) LevelUp();
+            if(completed) LevelUp(level + 1);
             else RestartLevel();
             OnEnable?.Invoke(completed);
         }
@@ -107,11 +107,8 @@ namespace BeeClicker
 
         public void ChangeLevel(int index)
         {
-            Complete(false);
-            _Level = index;
-            _CurrentMaxValue = Mathf.RoundToInt(_ValueCurve.Evaluate(_Level));
-            _CurrentValue = _CurrentMaxValue;
-            ChangeLevel();
+            Complete(index, false);
+            LevelUp(index);
         }
     }
 }

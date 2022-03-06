@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08b6f692aa497e04da9f6f271cb42d5c, type: 3}
-  m_Name: Shield
+  m_Name: Beekeeper
   m_EditorClassIdentifier: 
-  _Name: Shiled
-  _Description: Protective Bee
+  _Name: Beekeeper
+  _Description: You
   _Prices:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 150
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -28,12 +28,12 @@ MonoBehaviour:
       outWeight: 0
     - serializedVersion: 3
       time: 300
-      value: 4000000
-      inSlope: 0
-      outSlope: 0
+      value: 3000000
+      inSlope: 14244.689
+      outSlope: 14244.689
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.048276063
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -52,16 +52,16 @@ MonoBehaviour:
       outWeight: 0
     - serializedVersion: 3
       time: 300
-      value: 300000
-      inSlope: 0
-      outSlope: 0
+      value: 51576.63
+      inSlope: 227.09073
+      outSlope: 227.09073
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.11172435
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _DamageType: 6
-  _Icon: {fileID: 4540073814707146859, guid: 2947d6d6e289ca64fb7b411972c0b8a4, type: 3}
+  _DamageType: 1
+  _Icon: {fileID: -6978437120488251390, guid: 2947d6d6e289ca64fb7b411972c0b8a4, type: 3}
   _Upgrades: 

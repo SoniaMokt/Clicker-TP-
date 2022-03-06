@@ -7,7 +7,7 @@ namespace BeeClicker.Store
 {
     public class Item : MonoBehaviour, ISetupable<ItemScriptableObject>
     {
-
+        public System.Action OnLevelUp;
 
         [SerializeField] private int _Level = 0;
         [Header("Texts")]
@@ -51,6 +51,7 @@ namespace BeeClicker.Store
             if(!instance.TryToBuy(_Price)) return;
             instance.IncreaseDamage(_Item, Mathf.RoundToInt(_Item.Gain.Evaluate(_Level)));
             _Level++;
+            OnLevelUp?.Invoke();
             DamageType damageType = _Item.DamageType;
             if(!damageType.HasFlag(DamageType.ClickDamage))
             {

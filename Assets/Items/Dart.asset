@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08b6f692aa497e04da9f6f271cb42d5c, type: 3}
   m_Name: Dart
   m_EditorClassIdentifier: 
-  _Name: Dart
-  _Description: Attacking Bee
+  _Name: Attack Bee
+  _Description: Damage to monsters
   _Prices:
     serializedVersion: 2
     m_Curve:
@@ -63,5 +63,5 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _DamageType: 2
-  _Icon: {fileID: 6216302496798284736, guid: 2947d6d6e289ca64fb7b411972c0b8a4, type: 3}
+  _Icon: {fileID: 21300000, guid: ae35ee4ea90b956418540ca1cce1ba43, type: 3}
   _Upgrades: 

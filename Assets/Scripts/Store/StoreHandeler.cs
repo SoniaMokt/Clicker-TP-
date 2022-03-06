@@ -29,12 +29,12 @@ namespace BeeClicker.Store
             _ItemContainer.Handle(_Items);
         }
 
-        private void Disable(bool obj)
+        private void Disable(int level, bool obj)
         {
             gameObject.SetActive(false);
         }
 
-        private void Enable(bool obj)
+        private void Enable(int level, bool obj)
         {
             gameObject.SetActive(true);
         }

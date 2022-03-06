@@ -12,11 +12,13 @@ namespace BeeClicker
         public Hive Hive => _Hive;
         public Monster.Monster Monster => _Monster;
         public StatsHandeler StatsHandeler => _StatsHandeler;
+        public AudioPool AudioPool => _AudioPool;
 
         [SerializeField] private InputActionReference _MouseClick;
         [SerializeField] private Hive _Hive;
         [SerializeField] private Monster.Monster _Monster;
         [SerializeField] private StatsHandeler _StatsHandeler;
+        [SerializeField] private AudioPool _AudioPool;
 
         private Camera _MainCamera;
 

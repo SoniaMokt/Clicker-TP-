@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace BeeClicker.Monster
 {
@@ -9,27 +10,34 @@ namespace BeeClicker.Monster
         public System.Action<float> OnTimerStart;
 
         [SerializeField, Tooltip("In Seconds")] private float _Timer = 30f;
+
         private void Awake()
         {
             GameManager.Instance.Hive.OnCompleted += Enable;
             OnCompleted += Disable;
+            GetComponentInChildren<Button>().onClick.AddListener(Exit);
+        }
+
+        private void Exit()
+        {
+            Complete(_Level, false);
         }
 
         protected override void Start()
         {
             base.Start();
-            Disable(false);
+            Disable(0, false);
         }
 
-        protected override void Enable(bool completed = true)
+        protected override void Enable(int level, bool completed = true)
         {
-            base.Enable(completed);
+            base.Enable(level - 1, completed);
             StartCoroutine(Timer());
         }
 
-        protected override void Disable(bool completed = true)
+        protected override void Disable(int level, bool completed = true)
         {
-            base.Disable(completed);
+            base.Disable(level, completed);
             StopAllCoroutines();
         }
 
@@ -37,12 +45,13 @@ namespace BeeClicker.Monster
         {
             OnTimerStart?.Invoke(_Timer);
             yield return new WaitForSeconds(_Timer);
-            Complete(false);
+            Complete(_Level, false);
         }
 
-        protected override void Complete(bool completed = true)
+        protected override void Complete(int level, bool completed = true)
         {
-            base.Complete(completed);
+            base.Complete(level, completed);
+            if(!completed) return;
             GameManager.Instance.GainCurrency(Mathf.RoundToInt(_CurrentMaxValue * .5f));
         }
 

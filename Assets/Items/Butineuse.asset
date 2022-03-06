@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Butineuse
   m_EditorClassIdentifier: 
   _Name: Bee
-  _Description: Bsic Bee
+  _Description: Produces Honey
   _Prices:
     serializedVersion: 2
     m_Curve:
@@ -63,5 +63,5 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _DamageType: 4
-  _Icon: {fileID: -5194626031477277102, guid: 2947d6d6e289ca64fb7b411972c0b8a4, type: 3}
-  _Upgrades: 0000000000000000000000000000000000000000
+  _Icon: {fileID: -6789080653862441470, guid: bb200b0d942107745ab0c99e84722139, type: 3}
+  _Upgrades: 
