@@ -1,6 +1,6 @@
 using DG.Tweening;
 using System.Collections;
-using UnityEditor;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace BeeClicker.Monster
@@ -16,6 +16,7 @@ namespace BeeClicker.Monster
         private int _Dart;
         private int _Shield;
         private Bee[] _Bees;
+        private List<Bee> _ActiveBees = new List<Bee>();
         private Butineuse[] _Butineuses;
         private Dart[] _Darts;
         private Shield[] _Shields;
@@ -46,16 +47,22 @@ namespace BeeClicker.Monster
 
         private void OnEnable()
         {
-            foreach(Bee bee in _Bees)
+            SetActiveEnoughBees(_Butineuses, _Butineuse);
+            SetActiveEnoughBees(_Darts, _Dart);
+            SetActiveEnoughBees(_Shields, _Shield);
+            if(_ActiveBees.Count <= 0) return;
+            foreach(Bee bee in _ActiveBees)
             {
                 bee.Tint(0, _StateColors[0]);
                 bee.transform.localPosition = Random.insideUnitCircle * range;
             }
-            SetActiveEnoughBees(_Butineuses, _Butineuse);
-            SetActiveEnoughBees(_Darts, _Dart);
-            SetActiveEnoughBees(_Shields, _Shield);
             StartCoroutine(BeeStateChange());
             StartCoroutine(BeePathChange());
+        }
+
+        private void OnDisable()
+        {
+            StopAllCoroutines();
         }
 
 
@@ -63,8 +70,8 @@ namespace BeeClicker.Monster
         {
             while(Application.isPlaying || enabled)
             {
-                int random = Random.Range(0, _Bees.Length);
-                Bee randomBee = _Bees[random];
+                int random = Random.Range(0, _ActiveBees.Count);
+                Bee randomBee = _ActiveBees[random];
                 random = Random.Range(0, _StateColors.Length);
                 randomBee.Tint(random, _StateColors[random]);
                 yield return new WaitForSeconds(Random.Range(0, _ChangeStateInterval));
@@ -91,10 +98,11 @@ namespace BeeClicker.Monster
             {
                 max = bees.Length;
             }
-
+            _ActiveBees.Clear();
             for(int i = 0; i < max; i++)
             {
                 bees[i].gameObject.SetActive(true);
+                _ActiveBees.Add(bees[i] as Bee);
             }
             for(int i = max; i < bees.Length; i++)
             {
@@ -103,7 +111,7 @@ namespace BeeClicker.Monster
             for(int i = 0; i < bees.Length; i++)
             {
                 bees[i].transform.localScale = Vector3.one * .1f;
-                bees[i].transform.localScale += Vector3.one * .01f * (count / bees.Length);
+                bees[i].transform.localScale += (count / bees.Length) * .01f * Vector3.one;
             }
             for(int i = 0; i < count % bees.Length; i++)
             {
@@ -112,13 +120,14 @@ namespace BeeClicker.Monster
         }
 
 
+#if UNITY_EDITOR
         private void OnDrawGizmosSelected()
         {
             foreach(Transform child in transform)
             {
-                Handles.DrawWireArc(child.transform.position, Vector3.forward, Vector3.right, 360, range);
-                //Gizmos.DrawWireSphere(child.transform.position, range);
+                UnityEditor.Handles.DrawWireArc(child.transform.position, Vector3.forward, Vector3.right, 360, range);
             }
         }
+#endif
     }
 }

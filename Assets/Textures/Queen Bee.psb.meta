@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 60b4b96c356342e42a576019a8c21421
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Shield
+    originalName: 
+    pivot: {x: 0.61833894, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 351
+      width: 198
+      height: 238
+    spriteID: 04151702986517c4093e192ccce583de
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -302, y: 251}
+  - name: Pollen bag
+    originalName: 
+    pivot: {x: 0.06389002, y: 0.8711574}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 312
+      y: 585
+      width: 250
+      height: 235
+    spriteID: f9e2fa7bbfa5b8340a1882647f32a88a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 144, y: 496}
+  - name: Flower 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 210
+      y: 351
+      width: 73
+      height: 77
+    spriteID: d36292949a9db784b969ab11412b77a1
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 174, y: 137}
+  - name: Flower 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 210
+      y: 513
+      width: 64
+      height: 64
+    spriteID: 3c33d35ccc4ea974ab89107de6fa59e4
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 126, y: 235}
+  - name: Mad Icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 210
+      y: 436
+      width: 72
+      height: 69
+    spriteID: 2919ddcb6e09a1244bb92b64c5f7e790
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 112, y: 161}
+  - name: Eyes Normal
+    originalName: 
+    pivot: {x: 0.58358526, y: 0.4900376}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 804
+      width: 159
+      height: 58
+    spriteID: 438df4da972f0174cb672996eb77bedf
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -211, y: 480}
+  - name: Crown
+    originalName: 
+    pivot: {x: 0.5792842, y: 0.12896353}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 160
+      y: 597
+      width: 97
+      height: 114
+    spriteID: 74195e8cb005b7a4289184459a402a8e
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -82, y: 214}
+  - name: Head
+    originalName: 
+    pivot: {x: 0.42633277, y: 0.72543263}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 597
+      width: 148
+      height: 133
+    spriteID: c0c210ca2079ad9488eafb2688aee286
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -214, y: 301}
+  - name: L Wing
+    originalName: 
+    pivot: {x: 0.94225, y: 0.06985952}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 312
+      y: 828
+      width: 176
+      height: 166
+    spriteID: 30f0d9a7453c5ee42a679b4c4cdeca57
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 312, y: 517}
+  - name: FL Leg
+    originalName: 
+    pivot: {x: 0.38849935, y: 0.93411046}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 496
+      y: 828
+      width: 75
+      height: 163
+    spriteID: 31b6e15a10b2f424397463ec68619fe4
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 328, y: 702}
+  - name: Fur
+    originalName: 
+    pivot: {x: 0.6229174, y: 0.55836916}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 312
+      y: 296
+      width: 305
+      height: 281
+    spriteID: da8c995e180981c47afa2ed083a41268
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 209, y: 85}
+  - name: Brown Body
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 312
+      y: 4
+      width: 310
+      height: 284
+    spriteID: 4d15baa513e79ba4a9856a0e1de053ba
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 285, y: 2}
+  - name: White Body
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 310
+      height: 340
+    spriteID: b4ca3844848382f4d977b2281f2c0e3e
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -28, y: 3}
+  - name: Eyes Mad
+    originalName: 
+    pivot: {x: 0.59005123, y: 0.3935579}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 870
+      width: 154
+      height: 38
+    spriteID: dc4651ca79472fc4288a5b341b2c9bbe
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -214, y: 546}
+  - name: Eyes Happy
+    originalName: 
+    pivot: {x: 0.4670667, y: 0.47011277}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 738
+      width: 193
+      height: 58
+    spriteID: b693358b1af2e244d982acc1893ab622
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -215, y: 407}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 1024
+  importedTextureHeight: 1024
+  documentSize: {x: 504, y: 497}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 1024
+  textureActualHeight: 1024
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Icones
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 294
+    mosaicPosition: {x: 0, y: 0}
+  - name: Shield
+    spriteName: Shield
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 04151702986517c4093e192ccce583de
+    layerID: 293
+    mosaicPosition: {x: 4, y: 351}
+  - name: Pollen bag
+    spriteName: Pollen bag
+    isGroup: 0
+    parentIndex: 0
+    spriteID: f9e2fa7bbfa5b8340a1882647f32a88a
+    layerID: 292
+    mosaicPosition: {x: 312, y: 585}
+  - name: Flowers
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 00000000000000000000000000000000
+    layerID: 291
+    mosaicPosition: {x: 0, y: 0}
+  - name: Flower 1
+    spriteName: Flower 1
+    isGroup: 0
+    parentIndex: 3
+    spriteID: d36292949a9db784b969ab11412b77a1
+    layerID: 290
+    mosaicPosition: {x: 210, y: 351}
+  - name: Flower 2
+    spriteName: Flower 2
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 3c33d35ccc4ea974ab89107de6fa59e4
+    layerID: 289
+    mosaicPosition: {x: 210, y: 513}
+  - name: Mad Icon
+    spriteName: Mad Icon
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 2919ddcb6e09a1244bb92b64c5f7e790
+    layerID: 287
+    mosaicPosition: {x: 210, y: 436}
+  - name: 'Eyes Reine '
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 285
+    mosaicPosition: {x: 0, y: 0}
+  - name: Eyes Mad
+    spriteName: Eyes Mad
+    isGroup: 0
+    parentIndex: 7
+    spriteID: dc4651ca79472fc4288a5b341b2c9bbe
+    layerID: 284
+    mosaicPosition: {x: 4, y: 870}
+  - name: Eyes Happy
+    spriteName: Eyes Happy
+    isGroup: 0
+    parentIndex: 7
+    spriteID: b693358b1af2e244d982acc1893ab622
+    layerID: 283
+    mosaicPosition: {x: 4, y: 738}
+  - name: Eyes Normal
+    spriteName: Eyes Normal
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 438df4da972f0174cb672996eb77bedf
+    layerID: 282
+    mosaicPosition: {x: 4, y: 804}
+  - name: Reine Abeille
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 280
+    mosaicPosition: {x: 0, y: 0}
+  - name: Crown
+    spriteName: Crown
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 74195e8cb005b7a4289184459a402a8e
+    layerID: 279
+    mosaicPosition: {x: 160, y: 597}
+  - name: Head
+    spriteName: Head
+    isGroup: 0
+    parentIndex: 11
+    spriteID: c0c210ca2079ad9488eafb2688aee286
+    layerID: 278
+    mosaicPosition: {x: 4, y: 597}
+  - name: L Wing
+    spriteName: L Wing
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 30f0d9a7453c5ee42a679b4c4cdeca57
+    layerID: 277
+    mosaicPosition: {x: 312, y: 828}
+  - name: FL Leg
+    spriteName: FL Leg
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 31b6e15a10b2f424397463ec68619fe4
+    layerID: 276
+    mosaicPosition: {x: 496, y: 828}
+  - name: Fur
+    spriteName: Fur
+    isGroup: 0
+    parentIndex: 11
+    spriteID: da8c995e180981c47afa2ed083a41268
+    layerID: 275
+    mosaicPosition: {x: 312, y: 296}
+  - name: Brown Body
+    spriteName: Brown Body
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 4d15baa513e79ba4a9856a0e1de053ba
+    layerID: 273
+    mosaicPosition: {x: 312, y: 4}
+  - name: White Body
+    spriteName: White Body
+    isGroup: 0
+    parentIndex: 11
+    spriteID: b4ca3844848382f4d977b2281f2c0e3e
+    layerID: 272
+    mosaicPosition: {x: 4, y: 4}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: Queen Bee Texture
+  prefabAssetName: Queen Bee Prefab
+  spriteLibAssetName: Queen Bee Sprite Lib
+  secondarySpriteTextures: []
