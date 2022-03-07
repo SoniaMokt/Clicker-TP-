@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using UnityEditor;
 using UnityEngine;
@@ -29,16 +30,6 @@ namespace BeeClicker.Monster
             GameManager.Instance.OnBeePurchased += PurchaseBee;
         }
 
-        [ContextMenu("TINE")]
-        private void TintAll()
-        {
-            _Bees = GetComponentsInChildren<Bee>(true);
-            foreach(Bee bee in _Bees)
-            {
-                bee.Tint(_StateColors[0]);
-            }
-        }
-
         private void PurchaseBee(string bee, int amount)
         {
             if(bee == nameof(Butineuse))
@@ -55,15 +46,16 @@ namespace BeeClicker.Monster
 
         private void OnEnable()
         {
-
             foreach(Bee bee in _Bees)
             {
+                bee.Tint(0, _StateColors[0]);
                 bee.transform.localPosition = Random.insideUnitCircle * range;
             }
             SetActiveEnoughBees(_Butineuses, _Butineuse);
             SetActiveEnoughBees(_Darts, _Dart);
             SetActiveEnoughBees(_Shields, _Shield);
             StartCoroutine(BeeStateChange());
+            StartCoroutine(BeePathChange());
         }
 
 
@@ -72,10 +64,22 @@ namespace BeeClicker.Monster
             while(Application.isPlaying || enabled)
             {
                 int random = Random.Range(0, _Bees.Length);
-                Bee bee = _Bees[random];
+                Bee randomBee = _Bees[random];
                 random = Random.Range(0, _StateColors.Length);
-                bee.Tint(_StateColors[random]);
+                randomBee.Tint(random, _StateColors[random]);
                 yield return new WaitForSeconds(Random.Range(0, _ChangeStateInterval));
+            }
+        }
+        public IEnumerator BeePathChange()
+        {
+            while(Application.isPlaying || enabled)
+            {
+                foreach(Bee bee in _Bees)
+                {
+                    bee.transform.DOKill();
+                    bee.transform.DOLocalMove(Random.insideUnitCircle * range, _ChangeStateInterval).SetEase(Ease.InOutQuad);
+                }
+                yield return new WaitForSeconds(Random.Range(_ChangeStateInterval * .5f, _ChangeStateInterval * 2));
             }
         }
 

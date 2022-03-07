@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d9df22b89fad73941844a2650766b5d5
+guid: 92130d0dda415af41a5d35f8391d4892
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -102,7 +102,7 @@ ScriptedImporter:
       y: 247
       width: 198
       height: 238
-    spriteID: 4d6854bc286fe7847a94f3c2fb217df1
+    spriteID: e7ccde418adddec469985806097a4bf6
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -115,8 +115,8 @@ ScriptedImporter:
     uvTransform: {x: -81, y: 236}
   - name: Pollen bag
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.089870825, y: 0.908159}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -124,7 +124,7 @@ ScriptedImporter:
       y: 4
       width: 250
       height: 235
-    spriteID: 19223f1685ce5e34e8adcb4f2f79f68f
+    spriteID: 4bfa636769806e54ca0db96840bf5ece
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -146,7 +146,7 @@ ScriptedImporter:
       y: 247
       width: 73
       height: 77
-    spriteID: 30b75b60cb007ef4a82e6c9187b94943
+    spriteID: d881204b31fa73a45abfed340c609426
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -168,7 +168,7 @@ ScriptedImporter:
       y: 409
       width: 64
       height: 64
-    spriteID: c06d6648f62f40d469f0804b2b9fb2eb
+    spriteID: 751313276c157bb4689612bee45e2c21
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -190,7 +190,7 @@ ScriptedImporter:
       y: 332
       width: 72
       height: 69
-    spriteID: 89c6ada24deec494d910ca120f54995c
+    spriteID: 1ce3b25dd1be6d14bb0b92691424aa26
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -212,7 +212,7 @@ ScriptedImporter:
       y: 109
       width: 31
       height: 27
-    spriteID: 6727c020d5cd81a46a6aa697a3b798f3
+    spriteID: 2837bb72651698342ae756fef0e8b876
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -234,7 +234,7 @@ ScriptedImporter:
       y: 109
       width: 208
       height: 96
-    spriteID: 032c4c7ebf7ee944f9e02c53a32fae7c
+    spriteID: 2d4088605774626488ddc757fd12ae67
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -256,7 +256,7 @@ ScriptedImporter:
       y: 4
       width: 222
       height: 97
-    spriteID: 5adab83948084b4449f0895cdd6b9e1e
+    spriteID: 6141cb3a64de7ac45aa65235eaa2fb94
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -278,7 +278,7 @@ ScriptedImporter:
       y: 109
       width: 47
       height: 24
-    spriteID: 2ffa31093382f3240aaed1aa1e94dd4e
+    spriteID: eaaf7a939c22a844d912138d1e435056
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -300,7 +300,7 @@ ScriptedImporter:
       y: 4
       width: 208
       height: 97
-    spriteID: e437e69fb57af76429702dd7fffd98c5
+    spriteID: 116efbd9686479b4d8c262078f9fdbad
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -322,7 +322,7 @@ ScriptedImporter:
       y: 109
       width: 144
       height: 43
-    spriteID: 87a4fb1c76e49be4c81f4b865e8de471
+    spriteID: 48d376a4d20db2646aa5b249268498a5
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -344,7 +344,7 @@ ScriptedImporter:
       y: 4
       width: 220
       height: 193
-    spriteID: e214a9b7487c0f644ba83c0fc30db6d4
+    spriteID: a9b6c85c2493d0f4398af852ff97f374
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -357,8 +357,8 @@ ScriptedImporter:
     uvTransform: {x: 153, y: -52}
   - name: L Wing
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.8613274, y: 0.5738151}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -366,7 +366,7 @@ ScriptedImporter:
       y: 4
       width: 83
       height: 79
-    spriteID: 3c17f60d855f0b248ac67891ad7b6b53
+    spriteID: f4ce779a99c18ed46ac5be99ec16ffa3
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -379,8 +379,8 @@ ScriptedImporter:
     uvTransform: {x: 919, y: -103}
   - name: FL Leg
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.11074894, y: 0.86317503}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -388,7 +388,7 @@ ScriptedImporter:
       y: 434
       width: 47
       height: 52
-    spriteID: 2c33d258ae657bd42a0118ccd3e45d72
+    spriteID: 1ed79a5018b4aee4ba80c7dd48261d19
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -401,8 +401,8 @@ ScriptedImporter:
     uvTransform: {x: 528, y: 422}
   - name: Fur
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.605719, y: 0.5132834}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -410,7 +410,7 @@ ScriptedImporter:
       y: 247
       width: 219
       height: 249
-    spriteID: cb49f8006ae04fa4c834fcaf48f09215
+    spriteID: b656fd65b26b0f5489eaff5efda0c814
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -432,7 +432,7 @@ ScriptedImporter:
       y: 247
       width: 227
       height: 207
-    spriteID: 2c3ea262963bfa14f909d7a77a49e334
+    spriteID: 17667e493504c8a4d827b17f707b3c09
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -454,7 +454,7 @@ ScriptedImporter:
       y: 247
       width: 257
       height: 179
-    spriteID: 79e3d57b539e91d41a28c4dd9ef47adf
+    spriteID: 41e488526ae4ab24c81f1527f32ffaa1
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -488,168 +488,168 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 303
     mosaicPosition: {x: 0, y: 0}
   - name: Shield
     spriteName: Shield
     isGroup: 0
     parentIndex: 0
-    spriteID: 4d6854bc286fe7847a94f3c2fb217df1
+    spriteID: e7ccde418adddec469985806097a4bf6
     layerID: 302
     mosaicPosition: {x: 231, y: 247}
   - name: Pollen bag
     spriteName: Pollen bag
     isGroup: 0
     parentIndex: 0
-    spriteID: 19223f1685ce5e34e8adcb4f2f79f68f
+    spriteID: 4bfa636769806e54ca0db96840bf5ece
     layerID: 301
     mosaicPosition: {x: 4, y: 4}
   - name: Flowers
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 300
     mosaicPosition: {x: 0, y: 0}
   - name: Flower 1
     spriteName: Flower 1
     isGroup: 0
     parentIndex: 3
-    spriteID: 30b75b60cb007ef4a82e6c9187b94943
+    spriteID: d881204b31fa73a45abfed340c609426
     layerID: 299
     mosaicPosition: {x: 937, y: 247}
   - name: Flower 2
     spriteName: Flower 2
     isGroup: 0
     parentIndex: 3
-    spriteID: c06d6648f62f40d469f0804b2b9fb2eb
+    spriteID: 751313276c157bb4689612bee45e2c21
     layerID: 298
     mosaicPosition: {x: 937, y: 409}
   - name: Mad Icon
     spriteName: Mad Icon
     isGroup: 0
     parentIndex: 0
-    spriteID: 89c6ada24deec494d910ca120f54995c
+    spriteID: 1ce3b25dd1be6d14bb0b92691424aa26
     layerID: 296
     mosaicPosition: {x: 937, y: 332}
   - name: Emotions Abeille
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 294
     mosaicPosition: {x: 0, y: 0}
   - name: "Abeille Enerv\xE9e"
     spriteName: 
     isGroup: 1
     parentIndex: 7
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 293
     mosaicPosition: {x: 0, y: 0}
   - name: Mouth Angry
     spriteName: Mouth Angry
     isGroup: 0
     parentIndex: 8
-    spriteID: 6727c020d5cd81a46a6aa697a3b798f3
+    spriteID: 2837bb72651698342ae756fef0e8b876
     layerID: 292
     mosaicPosition: {x: 913, y: 109}
   - name: Eyes Angry
     spriteName: Eyes Angry
     isGroup: 0
     parentIndex: 8
-    spriteID: 032c4c7ebf7ee944f9e02c53a32fae7c
+    spriteID: 2d4088605774626488ddc757fd12ae67
     layerID: 291
     mosaicPosition: {x: 490, y: 109}
   - name: Abeille Normale
     spriteName: 
     isGroup: 1
     parentIndex: 7
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 289
     mosaicPosition: {x: 0, y: 0}
   - name: Eyes Normal
     spriteName: Eyes Normal
     isGroup: 0
     parentIndex: 11
-    spriteID: 5adab83948084b4449f0895cdd6b9e1e
+    spriteID: 6141cb3a64de7ac45aa65235eaa2fb94
     layerID: 288
     mosaicPosition: {x: 490, y: 4}
   - name: Mouth Normal
     spriteName: Mouth Normal
     isGroup: 0
     parentIndex: 11
-    spriteID: 2ffa31093382f3240aaed1aa1e94dd4e
+    spriteID: eaaf7a939c22a844d912138d1e435056
     layerID: 287
     mosaicPosition: {x: 858, y: 109}
   - name: Abeille Contente
     spriteName: 
     isGroup: 1
     parentIndex: 7
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 285
     mosaicPosition: {x: 0, y: 0}
   - name: Eyes Happy
     spriteName: Eyes Happy
     isGroup: 0
     parentIndex: 14
-    spriteID: e437e69fb57af76429702dd7fffd98c5
+    spriteID: 116efbd9686479b4d8c262078f9fdbad
     layerID: 284
     mosaicPosition: {x: 720, y: 4}
   - name: Mouth Happy
     spriteName: Mouth Happy
     isGroup: 0
     parentIndex: 14
-    spriteID: 87a4fb1c76e49be4c81f4b865e8de471
+    spriteID: 48d376a4d20db2646aa5b249268498a5
     layerID: 283
     mosaicPosition: {x: 706, y: 109}
   - name: Abeille Commun
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 280
     mosaicPosition: {x: 0, y: 0}
   - name: Head
     spriteName: Head
     isGroup: 0
     parentIndex: 17
-    spriteID: e214a9b7487c0f644ba83c0fc30db6d4
+    spriteID: a9b6c85c2493d0f4398af852ff97f374
     layerID: 279
     mosaicPosition: {x: 262, y: 4}
   - name: L Wing
     spriteName: L Wing
     isGroup: 0
     parentIndex: 17
-    spriteID: 3c17f60d855f0b248ac67891ad7b6b53
+    spriteID: f4ce779a99c18ed46ac5be99ec16ffa3
     layerID: 278
     mosaicPosition: {x: 936, y: 4}
   - name: FL Leg
     spriteName: FL Leg
     isGroup: 0
     parentIndex: 17
-    spriteID: 2c33d258ae657bd42a0118ccd3e45d72
+    spriteID: 1ed79a5018b4aee4ba80c7dd48261d19
     layerID: 277
     mosaicPosition: {x: 672, y: 434}
   - name: Fur
     spriteName: Fur
     isGroup: 0
     parentIndex: 17
-    spriteID: cb49f8006ae04fa4c834fcaf48f09215
+    spriteID: b656fd65b26b0f5489eaff5efda0c814
     layerID: 276
     mosaicPosition: {x: 4, y: 247}
   - name: White Body
     spriteName: White Body
     isGroup: 0
     parentIndex: 17
-    spriteID: 2c3ea262963bfa14f909d7a77a49e334
+    spriteID: 17667e493504c8a4d827b17f707b3c09
     layerID: 275
     mosaicPosition: {x: 437, y: 247}
   - name: Brown Body
     spriteName: Brown Body
     isGroup: 0
     parentIndex: 17
-    spriteID: 79e3d57b539e91d41a28c4dd9ef47adf
+    spriteID: 41e488526ae4ab24c81f1527f32ffaa1
     layerID: 274
     mosaicPosition: {x: 672, y: 247}
   characterData:
