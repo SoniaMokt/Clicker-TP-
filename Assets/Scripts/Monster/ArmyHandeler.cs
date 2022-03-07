@@ -47,6 +47,7 @@ namespace BeeClicker.Monster
 
         private void OnEnable()
         {
+            _ActiveBees.Clear();
             SetActiveEnoughBees(_Butineuses, _Butineuse);
             SetActiveEnoughBees(_Darts, _Dart);
             SetActiveEnoughBees(_Shields, _Shield);
@@ -98,7 +99,6 @@ namespace BeeClicker.Monster
             {
                 max = bees.Length;
             }
-            _ActiveBees.Clear();
             for(int i = 0; i < max; i++)
             {
                 bees[i].gameObject.SetActive(true);
